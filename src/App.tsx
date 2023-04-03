@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // Components
 import { Earth } from './components/Earth';
+import { Section } from './components/Section';
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -13,8 +14,10 @@ const CanvasContainer = styled.div`
 export const App = () => {
   return (
     <CanvasContainer>
+      {/* Outside of the Canvas */}
+      <Section />
       <Canvas>
-        <Suspense fallback={'Loading...'}>
+        <Suspense fallback={null}>
           <Earth />
         </Suspense>
       </Canvas>
